@@ -9,6 +9,7 @@ const submitbtnEl = document.getElementById('submit-btn')
 
 const confirmedMessageEl = document.getElementById('confirmed-message')
 const dismissMessageEl = document.getElementById('dismiss-message')
+const submitForm = document.getElementById('form');
 
 function formSuccess() {
   confirmedMessageEl.classList.add('active')
@@ -22,7 +23,7 @@ function validateEmail (email) {
   return emailRegex.test(email)
 }
 
-submitbtnEl.addEventListener('click', (e) => {
+submitForm.addEventListener('submit', (e) => {
   e.preventDefault()
   const email = emailInput.value.trim()
 
